@@ -2,7 +2,6 @@
     var MiSaludo [Pascalcase]
     var miSaludo [Camelcase] es lo normal por convenio 
 
-
 var saludo -> declaración de variable 
 saludo="hola" -> inicialización de variable
 
@@ -16,6 +15,7 @@ Tipos de datos
  - undefined [que no esta definido, no vale nada]
  */
  
-var user = "Mundo"
+var saludo = 'Hola'
+var user = 'Mundo'
 
-console.log(saludo, user) /* console.log es mostrar en pantalla */
+console.log (saludo, user)
