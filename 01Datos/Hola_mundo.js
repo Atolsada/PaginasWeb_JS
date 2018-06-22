@@ -12,7 +12,7 @@ Tipos de datos
  - number [2,3,4]
  - booleans [true / false]
  - object [lo que no es lo anterior de los anteriores]
- - undefined [que no esta definido, no vale nada]
+ - undefined [que no esta definido, no vale nada pero si tiene tipo, su tipo es undefined]
  */
  
 var saludo = 'Hola'
