@@ -17,3 +17,28 @@ function sumar(a,b){
     console.log(resultado)
 }
 sumar(2,4)
+
+
+/* - CONSEJOS -
+declarar variable
+variables globales, caca, no se cambian, 
+todas las variables van dentro de una function
+todas las variables se declaran
+no hay variables globales
+ */
+
+
+ /*HAY QUE FIXEAR ESTO */
+sumar (2,4)
+dividir(4,2)
+
+function sumar (a, b){
+     let resultado = a / b
+     console.log(resultado)
+ }
+function dividir (a,b){
+     if (b != 0){
+         let resultado = a / b
+     }
+    console.log(resultado)
+ }
