@@ -1,65 +1,74 @@
 /*VARIABLES GLOBALES */
-
-var global = 12
+/* Var no usamos nunca, ya que es global y nunca vamos a hacer globales */
 
 function calcular (pDato){
     //global = global + pDato;
     global += pDato /* Es igual que el comment de arriba */
     return global;
-} /* Si se inicializa una variable SIN DECLARAR (Let, var, etc)dentro de una función... */
-/* ...se crea como variable global */
-
-console.log(calcular(10)) /* solución 22 - Documents\PaginasWeb_JS\01datos> node .\Variables.js*/
-console.log(global) /*También da 22 por que muestra el nuevo valor que hay en pDato */
-
-/*3 Ámbitos de la función
-- aquellos que escribimos dentro donde ponemos function
-- Ámbitos de bloque
-- ámbitos globales (fuera de la función la declares como la declares)
-
-function aumentar(){
-     local - es global
-    var local - es local 
 }
-*/
 
-/* function aumentar(){
-    var local = 2
-    let tambienLocal = 3
-    const LOCAL = 4
-    consol.log(local)
-    consol.log(tambienLocal)
-    consol.log(LOCAL)
+/* function main1(){
+    let global = 12
+    console.log(calcular(10))
+    console.log(global);
+} MAL HECHO, NO SE HACE ASÍ */
+
+/*function calcular (total, pDato){
+    //total = total + pDato;
+    total += pDato /* Es igual que el comment de arriba 
+    return total;
 }
-aumentar()
-console.log(local) //Nos devuelve - Undefined
-console.log(tambienLocal) //Nos devuelve - Undefined
-console.log(LOCAL) */ //Nos devuelve - Undefined
+ function main1(){
+    let total = 12  variable local a la funcion main1 - 12 
+    console.log(calcular(total, 10))  variable local a la funcion main1 - 22 
+    console.log(total);  parámetro local de la función calcular  - 12
+} CASI BIEN*/
+function calcular (pTotal, pIncremento){
+    pTotal = pTotal + pIncremento;
+    return pTotal;
+}
+function main1(){
+    let total = 12
+    let incremento = 10 /*podrian sustituirse el (let) por (const) por que nunca cambian */
+    console.log(calcular(total, incremento))
+    console.log(total)
+    }
+ /* FORMA CORRECTA */
+main1()
 
-/* Lo que nos muestra es undefined por que las variables están dentro de la funcion y a nviel global no existen
-para que funcionase tendrían que llamarse desde dentro de la función */
-/* SE EJECUTAN LAS FUNCIONES, LAS VARIABLES SE USAN */
-
-
-/* VARIABLES LOCALES con ÁMBITO de BLOQUE */
-/* function disminuir(){
+function disminuir1(){
     if (true){
-        var local = 2 
-        let tambienLocal = 3
-        const LOCAL = 4  ->No se puede variar los CONST(LOCAL += 1) Nos dará error de asignación por que una constante siempre es lo mismo siempre.
-        tambieneLocale += 2
-        console.log(local) //Nos devuelve - 2
-        console.log(tambienLocal) //Nos devuelve - 3
-        console.log(LOCAL) //Nos devuelve - 4
-        console.log(tambieneLocale) //Nos devuelve - 5
-    }  
-    console.log(local) //Nos devuelve - 2 por que (var), su ámbito es local a la función.
-    console.log(tambienLocal) //Nos devuelve - Undefined por el ámbito de bloque
-    console.log(LOCAL) //Nos devuelve - Undefined por el ámbito de bloque
+        let local = 2
+        const LOCAL = 4
+        local += 2
+        console.log(local) /* - 4 */
+        console.log(LOCAL) /* - 4 */
+    }
 }
 
-disminuir()
-console.log(local) //Nos devuelve - Undefined
-console.log(tambienLocal) //Nos devuelve - Undefined
-console.log(LOCAL) //Nos devuelve - Undefined
-*/
+
+function disminuir2(){
+    let local = 2
+    const LOCAL = 4
+    if (true){
+        /*let local = 4  (let) - CREAME UNA VARIABLE QUE SE LLAME LOCAL QUE SEA 4. Aunque se llame igual que la anterior son diferentes por el bloque*/
+        local += LOCAL
+    }
+    console.log(local) /* - 4 */
+    console.log(LOCAL) /* - 4 */
+}
+
+function disminuir3(){
+    let local = 2
+    /* let local
+    local = 2 Se puede hacer en una o dos líneas por ser (var)iable*/
+    const LOCAL = 4
+    /* const LOCAL
+    LOCAL = 4 Esto es erróneo ya que (const) será undefined siempre */
+    local -= LOCAL /* lo que vale local menos lo que vale LOCAL */
+    console.log(local) /* - -2 */
+    console.log(LOCAL) /* - 4 */
+    }
+disminuir1()
+disminuir2()
+disminuir3()
