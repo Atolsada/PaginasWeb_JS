@@ -35,7 +35,7 @@ console.log (b) /* - 5 guarda lo que vale (a) en ese momento, lo que le pase a (
 
 // TIPOS REFERENCIADOS - guarda los datos "en memoria mutable" y en la memoria"normal" guardamos la referencia que llama a esos datos
 // SON MUTABLES
-// SE UTILIZAN POR REFERENCIA
+// SE UTILIZAN POR REFERENCIA - son los nombres de los objetos, tu puedes ser Jose y Pepe al mismo tiempo y ambas son referencias por las que se te conoce
 
 let oLibro = {
     titulo: 'LOTR',
