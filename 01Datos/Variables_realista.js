@@ -47,7 +47,7 @@ function disminuir1(){
 }
 
 
-function disminuir2(){ /* ES UNA FUNCION TIPO void POR QUE NO DEVUELVE NADA */
+function disminuir2(){ /* ES UNA FUNCION TIPO void POR QUE NO DEVUELVE NADA PERO SI SE PUEDE VER*/
     let local = 2
     const LOCAL = 4
     if (true){
