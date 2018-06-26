@@ -73,7 +73,7 @@ function main(){
     let circulo = calcularCirculo(radio)
     mostrar(circulo)
     radio = 7;
-    circulo =calcularCirculo(radio)
+    circulo = calcularCirculo(radio)
     mostrar(circulo)
 }
 main()
