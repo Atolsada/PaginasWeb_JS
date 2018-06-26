@@ -96,4 +96,14 @@ CONSOLE.LOG(NOMBRE) ES UNA INVOCACION DEL SISTEMA NO CREADA POR NOSOTROS
 
 
 LAS CONSTANTES SE PASAN POR VALOR NO POR REFERENCIA
+
+!!! Salida de datos es mostrar datos en pantalla como alert o console.log
+y funciones puras calculan datos
+funcion main invoca otras funciones
+
+hardcorear es --- console.log(14) poner un valor, a lo bruto sin asociarlo a nada.
+correcto-> let iva = 14
+            console.log(iva)
+
+
 */
