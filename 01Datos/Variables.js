@@ -1,4 +1,4 @@
-/*VARIABLES GLOBALES */
+/*VARIABLES GLOBALES */ /* - ambito/scope donde se alojan las funciones - */
 
 var global = 12
 

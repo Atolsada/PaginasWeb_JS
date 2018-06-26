@@ -47,7 +47,7 @@ function disminuir1(){
 }
 
 
-function disminuir2(){
+function disminuir2(){ /* ES UNA FUNCION TIPO void POR QUE NO DEVUELVE NADA */
     let local = 2
     const LOCAL = 4
     if (true){
@@ -66,9 +66,34 @@ function disminuir3(){
     /* const LOCAL
     LOCAL = 4 Esto es erróneo ya que (const) será undefined siempre */
     local -= LOCAL /* lo que vale local menos lo que vale LOCAL */
-    console.log(local) /* - -2 */
+    console.log("El resultado es:", local) /* - -2 */
     console.log(LOCAL) /* - 4 */
     }
 disminuir1()
 disminuir2()
 disminuir3()
+
+
+
+/* 
+function disminuir1(){ ---[TODO ES UNA FUNCIÓN]
+    let x = 24 ---[LET EXISTE EN TODA AL FUNCIÓN]
+    if (true){ ---[ESTO ES UN BLOQUE EN LA FUNCION]
+        let local = 2 ---[LET SE APLICA EN BLOQUE, VAR EN FUNCION Y NO RECONOCE BLOQUES]
+        const LOCAL = 4
+        local += 2
+        console.log(local)  - 4 
+        console.log(LOCAL)  - 4 
+    } ---[AQUÍ TERMINA EL BLOQUE DE LA FUNCIÓN]
+    x += 4 ---[EXISTE EN LA FUNCIÓN]
+} 
+
+INVOCAR UNA FUNCIÓN ES: NOMBRE Y PARÉNTESIS, SE PUEDEN INVOCAR DESDE DONDE QUIERAS
+NOMBRE()
+() ---[ESOS PARÉNTESIS SE LLAMAN OPERADOR] .EJECUTA NOMBRE.
+
+CONSOLE.LOG(NOMBRE) ES UNA INVOCACION DEL SISTEMA NO CREADA POR NOSOTROS
+
+
+LAS CONSTANTES SE PASAN POR VALOR NO POR REFERENCIA
+*/

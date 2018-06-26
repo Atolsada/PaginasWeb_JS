@@ -3,7 +3,7 @@
 - Funciones puras, no tienen (side effects) -> retornan datos (se ven en la consola)
 - Funciones "con efecto/operativas"
 - Funciones con efectos
-- Funciones Main
+- Funciones Main - funcion de control, llaman a otras funciones
 */
 
 function suma(a,b){
@@ -12,10 +12,10 @@ function suma(a,b){
 }
 
 function mostrar(dato){
-    console.log(dato)
+    alert(dato)
 }
 
-function main(){
+function main(){ 
     mostrar(suma(2,5))
     mostrar(suma(45,172354))
 }
