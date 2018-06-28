@@ -20,5 +20,8 @@ let calculos = { //objeto, coleccion de propiedades
 calculos.num1 = 23
 calculos.num2 = 3
 // sumar(calculos)
-calculos.sumar() // (*) Y poner esto así
+calculos.sumar() // --->(*) Y poner esto así / calculos.sumar() Para llamar a la función dentro del objeto
 //console.log (calculos.result) --->(**) Sustituido en el objeto de arriba
+// [.] operador de propiedades de objetos
+// los objetos tienen metodos/funciones que hacen las cosas
+// EJ. Una persona tiene la funcion hablar con las propiedades: grave, mal hablado, soso.
