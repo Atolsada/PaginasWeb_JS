@@ -42,7 +42,7 @@ console.log(aDatosFull)
 // aDatosFull[0] <--- primer objeto del array
 
 // Paso 4 (añadir apellidos)
-aDatosFull.push({nombre: 'Elena', puesto: 'Alumna'})
 aDatosFull[0].apellidos = 'Perez'
 aDatosFull[1].apellidos = 'Lopez'
 console.log (aDatosFull)
+
