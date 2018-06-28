@@ -5,7 +5,7 @@
 } */
 // Los objetos tienen propiedas estaticas y dinamicas
 let calculos = { //objeto, coleccion de propiedades
-    num1 : '0', // '' ó 0 es lo mismo
+    num1 : '0', // [''] ó [0] es lo mismo
     num2 : '0',
     result : '0',
     // UNA PROPIEDAD DE UN OBJETO PUEDE SER OTRO OBJETO
