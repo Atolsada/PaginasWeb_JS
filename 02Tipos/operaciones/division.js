@@ -2,6 +2,7 @@ function dividir(a,b) {
     let resultado
     if (isNaN(a)) { resultado = "Error"}
     else if (isNaN(b)) { resultado = "Error"}
+    else if (b == 0) { resultado = "No se puede dividir por 0"}
     else {
         resultado = a / b
     }
