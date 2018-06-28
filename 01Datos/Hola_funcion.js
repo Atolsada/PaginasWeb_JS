@@ -42,3 +42,5 @@ function dividir (a,b){
      }
     console.log(resultado)
  }
+
+ // typeof te dice que tipo de variable es, incluso nos dice que una function es una variable
