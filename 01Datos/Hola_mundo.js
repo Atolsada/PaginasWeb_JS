@@ -7,12 +7,13 @@ saludo="hola" -> inicialización de variable
 
 Declaración + Inicialización
 
-Tipos de datos
+Tipos de datos/objetos
  - string [hola, pepe]
  - number [2,3,4]
  - booleans [true / false] (ejemplo IsNaN)
  - object [lo que no es lo anterior de los anteriores (un conjunto de propiedades)]
  - undefined [que no esta definido, no vale nada pero si tiene tipo, su tipo es undefined]
+
  
  **Ejemplos**
 
