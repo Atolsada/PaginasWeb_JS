@@ -22,11 +22,17 @@ function asignaciones () {
     x %= 2 // 
 }
 
+asignaciones()
+
 //Funcion para saber si es par 
+
+// !! 
+// compruebo si NO eres par - if (num % 2 != 0) <--- No suele usarse nunca , ¿2 es distinto de 0?
+// compruebo si SI eres par - if (num % 2 == 0)
 
 function isPar(a){
     let isPar = true
-    if (a %=2 == 0){ // Si a divides por 2 y da 0 eres par
+    if (a % 2 != 0){ // Si a divides por 2 y da 0 eres par
         isPar = false
     }
     return isPar
@@ -34,7 +40,7 @@ function isPar(a){
 console.log('22 es par', isPar(22))
 console.log('25 es par', isPar(25))
 
-// otro modo
+// otro modo pero no tan limpio
 
 function esPar (num) {
     let isPar
@@ -47,5 +53,30 @@ function esPar (num) {
 }
 console.log('22 es par', esPar(22))
 console.log('25 es par', esPar(25))
+
+
+// !!! explicacion
+console.log(string(22)) // <--- Casting, combiertelo en string
+console.log(number('22')) // // <--- Casting, combiertelo en number
+
+
+// !!! casting booleano
+
+// falsy: <--- aquellos elementos que cuando haces casting a boolean te dan false
+// false
+// 0
+// ''
+// undefined - let x = undefined
+
+console.log(Boolean(false))
+console.log(Boolean(0))
+console.log(Boolean(''))
+console.log(Boolean(undefined))
+
+// truly <--- aquellos elementos que cuando haces casting a boolean te dan true
+console.log(Boolean(true))
+console.log(Boolean(109))
+console.log(Boolean('Pepe'))
+
 
 
