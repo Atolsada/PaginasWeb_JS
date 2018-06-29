@@ -43,7 +43,7 @@ console.log('25 es par', isPar(25))
 
 // Ver.B - otro modo pero no tan limpio
 
-function esPar (num) {
+function isPar (num) {
     let isPar
     if (num % 2 != 0) {
         isPar = false
@@ -57,7 +57,7 @@ console.log('25 es par?', esPar(25))
 
 // Completar Ver.A
 
-function esPar (num) {
+function isPar (num) {
     let isPar = true
     if (isNaN(num)) {
         isPar = false
@@ -74,7 +74,7 @@ function esPar (num) {
 // Versión limpia de la Ver.A completa REFRACTORIZACIÓN:
 // Reestructurar un código, alterando su estructura interna sin cambiar la externa.
 
-function esPar (num) {
+function isPar (num) {
     let isPar = true
     if (typeof num != 'number'|| (num % 2)) {
         isPar = false
@@ -83,12 +83,28 @@ function esPar (num) {
 }
 console.log('22 es par', isPar(22)) // true
 console.log('25 es par', isPar(25)) // false
-console.log('0 es par?', esPar(0)) // true
-console.log('Pepe es par?', esPar('Pepe')) // false
-console.log('"" es par?', esPar('')) // false
-console.log(' es par?', esPar()) // false
-console.log('true es par?', esPar(true)) // false
-console.log('false es par?', esPar(false)) // true
+console.log('0 es par?', isPar(0)) // true
+console.log('Pepe es par?', isPar('Pepe')) // false
+console.log('"" es par?', isPar('')) // false
+console.log(' es par?', isPar()) // false
+console.log('true es par?', isPar(true)) // false
+console.log('false es par?', isPar(false)) // true
+
+// Pasarlo a operador 'ternario'
+
+function isParFinal (num) {
+    return (typeof num == 'number' && num % 2 == 0)? true : false
+    } 
+// devuelveme(return) true o false, segun lo que hay dentro del parentesis
+
+console.log('22 es par', isParFinal(22)) // true
+console.log('25 es par', isParFinal(25)) // false
+console.log('0 es par?', isParFinalisParFinal(0)) // true
+console.log('Pepe es par?', isParFinal('Pepe')) // false
+console.log('"" es par?', isParFinal('')) // false
+console.log(' es par?', isParFinal()) // false
+console.log('true es par?', isParFinal(true)) // false
+console.log('false es par?', isParFinal(false)) // true
 
 
 // !!! explicacion
@@ -138,3 +154,13 @@ console.log(Boolean('Pepe'))
     }
     console.log(a) 
 */
+
+//Matemáticas simples
+/* 
+a = 2*3+4
+a = 6+4
+a = 10
+
+a = 2*(3+4)
+a = 2*7
+a = 14 */
