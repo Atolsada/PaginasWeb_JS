@@ -24,7 +24,7 @@ function asignaciones () {
 
 asignaciones()
 
-//Funcion para saber si es par 
+//EJERCICIO: Funcion para saber si es par 
 
 // !! 
 // compruebo si NO eres par - if (num % 2 != 0) <--- No suele usarse nunca , ¿2 es distinto de 0?
@@ -74,9 +74,14 @@ console.log(Boolean(''))
 console.log(Boolean(undefined))
 
 // truly <--- aquellos elementos que cuando haces casting a boolean te dan true
+// true
+//1,2,3,4...
+//'Pepe'
 console.log(Boolean(true))
 console.log(Boolean(109))
 console.log(Boolean('Pepe'))
 
+
+//ATENCION: Todo dentro de (if) lo hace booleano
 
 
