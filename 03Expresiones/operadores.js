@@ -30,6 +30,7 @@ asignaciones()
 // compruebo si NO eres par - if (num % 2 != 0) <--- No suele usarse nunca , ¿2 es distinto de 0?
 // compruebo si SI eres par - if (num % 2 == 0)
 
+//Ver. A
 function isPar(a){
     let isPar = true
     if (a % 2 != 0){ // Si a divides por 2 y da 0 eres par
@@ -40,7 +41,7 @@ function isPar(a){
 console.log('22 es par', isPar(22))
 console.log('25 es par', isPar(25))
 
-// otro modo pero no tan limpio
+// Ver.B - otro modo pero no tan limpio
 
 function esPar (num) {
     let isPar
@@ -51,13 +52,48 @@ function esPar (num) {
     }
     return isPar
 }
-console.log('22 es par', esPar(22))
-console.log('25 es par', esPar(25))
+console.log('22 es par?', esPar(22))
+console.log('25 es par?', esPar(25))
+
+// Completar Ver.A
+
+function esPar (num) {
+    let isPar = true
+    if (isNaN(num)) {
+        isPar = false
+    }
+    else if (num === ''){  // === ---> mismo valor y mismo tipo
+        isPar = false
+    }
+    else if (num % 2) {
+        isPar = false
+    } 
+    return isPar
+}
+
+// Versión limpia de la Ver.A completa REFRACTORIZACIÓN:
+// Reestructurar un código, alterando su estructura interna sin cambiar la externa.
+
+function esPar (num) {
+    let isPar = true
+    if (typeof num != 'number'|| (num % 2)) {
+        isPar = false
+    } 
+    return isPar
+}
+console.log('22 es par', isPar(22)) // true
+console.log('25 es par', isPar(25)) // false
+console.log('0 es par?', esPar(0)) // true
+console.log('Pepe es par?', esPar('Pepe')) // false
+console.log('"" es par?', esPar('')) // false
+console.log(' es par?', esPar()) // false
+console.log('true es par?', esPar(true)) // false
+console.log('false es par?', esPar(false)) // true
 
 
 // !!! explicacion
-console.log(string(22)) // <--- Casting, combiertelo en string
-console.log(number('22')) // // <--- Casting, combiertelo en number
+// console.log(string(22)) <--- Casting, combiertelo en string
+// console.log(number('22')) <--- Casting, combiertelo en number
 
 
 // !!! casting booleano
@@ -84,4 +120,21 @@ console.log(Boolean('Pepe'))
 
 //ATENCION: Todo dentro de (if) lo hace booleano
 
+// b == 0 si algo es igual a 0 -> (!b)
+// b! = 0 si algo no es igual a 0 -> (b)
 
+/*  
+    let a = 'Juan'
+    let b = 0
+    compruebo si b == 0
+    if (!b) {
+        a = 'Pepe'
+    }
+    console.log(a)
+    b = 4
+    compruebo si b != 0
+    if (b) {
+        a = 'Luis'
+    }
+    console.log(a) 
+*/
