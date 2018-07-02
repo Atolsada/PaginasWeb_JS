@@ -28,4 +28,27 @@ iterarInversa()
 // Cuando creamos una funcion tenemos que tener presente qué parámetros recibe y que valor
 // param y return
 
-function factorial(){}
+/** "ficha de la funcion"
+* @param num: number
+* @return factorial: number
+*/
+
+function factorial(num){
+    let factorial = 1
+    for (let i = 1; i <= num; i++) {
+        factorial = factorial * i
+    }
+    return factorial
+}
+
+// Inverso
+function factorialm(num){
+    let f = 1
+    for (let i = num; i > 0; i--) {
+        f = f * i
+    }
+    return f
+}
+
+console.log(factorial(5)) //<--- 120
+console.log(factorialm(5)) //<--- 120
