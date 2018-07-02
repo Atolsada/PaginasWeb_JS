@@ -52,3 +52,32 @@ function factorialm(num){
 
 console.log(factorial(5)) //<--- 120
 console.log(factorialm(5)) //<--- 120
+
+// Que me devuelva un numero que es la suma del array¿?
+
+function totalizar(aDatos){
+    let num = 1
+    for (let i = 0; i < aDatos[i]; i++) {
+        num = aDatos[i];
+        
+    }
+    return num
+}
+
+aDatos = [2,3,5,7]
+
+console.log(`El total es ${totalizar(aDatos)}`)
+
+// Leer array - usuario X es el 1, el usuario y es el 2, etc.
+
+function leerArray(aDatos) {
+    let r = ''
+     for (let i = 0; i < aDatos.length; i++) {
+        r += `
+        El usuario ${i+1} es ${aDatos[i]}`
+    }
+    return r
+}
+
+let aNombres = ['Pepe', 'Rosa', 'Luis', 'Maria']
+console.log(leerArray(aNombres))
