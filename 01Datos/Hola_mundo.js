@@ -25,7 +25,7 @@ Tipos de datos/objetos
      edad: 34,
      isEstudiante: true,
  }
- - var algo 
+ - var  
 */
  
 var saludo = 'Hola'
