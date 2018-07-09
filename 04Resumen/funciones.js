@@ -13,6 +13,11 @@
  * datos de la figura -> objeto (por si unas veces el alto, el ancho, etc. Y así tú mandas las cosas)
  * area de figura -> number
  * 
+ * (9) 
+ * Si es triangulo- h y b
+ * Si es cuadrado- l
+ * Si es circulo- r
+ * 
  */
 
 //Cómo se declaran-> function calcularArea(){} (4)
@@ -41,3 +46,133 @@
 // para invocar-> nombre de la funcion seguido de parentesis: calcularArea() (3)
 
 // (7) consolelog(calcularArea('triángulO', (h:12, b:10))) <--- esta hardcodeado
+
+
+//(8)
+
+//function calcularArea(figura, datos){
+//    let resultado
+    
+//    switch(figura.toLowerCase()){
+//    case 'triangulo':
+//   case 'triángulo':
+//       resultado = (datos.h * datos.b) / 2
+//        break;
+//    case 'cuadrado':
+//        resultado = datos.l * datos.l
+//        break;
+//    case 'circulo':
+//        resultado = datos.r * datos.r * Math.PI
+//        break;
+
+//    default:
+//        break;
+//    }
+//    return resultado
+//}
+
+//console.log(calcularArea('triángulO', {h:12, b:10}))
+//console.log(calcularArea('cuadrado', {l:10}))
+//console.log(calcularArea('circulo', {r:10}))
+
+//(10)
+//* let figura = triángulO
+
+//(11)
+// let figura = 'triángulO'
+//(12) console.log(calcularArea('cosa', {h:12, b:10}))
+
+
+//13
+
+//function calcularArea(figura, datos){
+//    let resultado = 0
+    
+//    switch(figura.toLowerCase()){
+//    case 'triangulo':
+//    case 'triángulo':
+//        resultado = (datos.h * datos.b) / 2
+//        break;
+//    case 'cuadrado':
+//        resultado = datos.l * datos.l
+//        break;
+//    case 'circulo':
+//    case 'círculo':
+//        resultado = datos.r * datos.r * Math.PI
+//        break;
+
+//    default:
+//        break;
+//    }
+//    return resultado.toFixed(2)
+//}
+
+
+//function probar(){
+//    let sFigura = 'triángulO'
+//    let oDatos= {h:12.3, b:10.5}
+//    console.log(calcularArea(sFigura, oDatos))
+//    sFigura = 'cuadrado'
+//    oDatos = {l:10}
+//    console.log(calcularArea(sFigura, oDatos))
+//    sFigura = 'circulo'
+//    oDatos = {r:10}
+//    console.log(calcularArea(sFigura, oDatos))
+//}
+
+//probar()
+
+//(14) ahora va bien pero no tenemos comprobacion de errores vamos a añadirlo con array for each
+
+function calcularArea(figura, datos){
+    let resultado = 1
+    
+    switch(figura.toLowerCase()){
+    case 'triangulo':
+    case 'triángulo':
+
+        //datos.h
+        //datos['h']
+
+        //let x = 'h'
+        //datos['x']
+
+        //datos {h:12.3, b:10.5}
+        //primera vuelta key datos[key] 12.3, segunda vuelta key datos[key] 10.5
+
+        for (const key in datos) {
+            resultado = datos[key]
+        }
+        // resultado = (datos.h * datos.b) / 2
+        break;
+    case 'cuadrado':
+        resultado = datos.l * datos.l
+        break;
+    case 'circulo':
+    case 'círculo':
+        resultado = datos.r * datos.r * Math.PI
+        break;
+
+    default:
+        break;
+    }
+    return resultado.toFixed(2)
+}
+
+
+function probar(){
+    let sFigura = 'triángulO'
+    let oDatos= {x:12.3, y:10.5}
+    console.log(calcularArea(sFigura, oDatos))
+    sFigura = 'cuadrado'
+    oDatos = {l:10}
+    console.log(calcularArea(sFigura, oDatos))
+    sFigura = 'circulo'
+    oDatos = {r:10}
+    console.log(calcularArea(sFigura, oDatos))
+    sFigura = 'pentagono'
+    oDatos = {r:10}
+    console.log(calcularArea(sFigura, oDatos))
+}
+
+probar()
