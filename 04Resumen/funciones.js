@@ -1,7 +1,7 @@
 // declaración (1)
 
 
-/** (JAVADOC se llama esta forma de comentario) (5)
+/**(5) (JAVADOC se llama esta forma de comentario) 
  * Qué quiero que haga mi función que calcula el area de algo  -> Calcular areas diversas de figuras
  * Cómo se le dice algo a la función-> el primer parámetro - nombre de la figura
  * El segundo parámetro cual será? depende de la figura - datos de la figura
@@ -20,10 +20,10 @@
  * 
  */
 
-//Cómo se declaran-> function calcularArea(){} (4)
+//(4) Cómo se declaran-> function calcularArea(){} 
 // las que no devuelven valor y las que si-> function calcularArea():void{} / function calcularArea(){let resultado return resultado}
 
-/** (5)
+/**(5)
  * function calcularArea(figura, datos){
  *      let resultado
  * 
@@ -41,11 +41,11 @@
 // Al poner figura.toLowerCase() -> hacemos que si el usuario escriba mayus o no, lo entienda la funcion
 // case 'triángulo': -> puesto para que entienda si se pone tilde, y se pueden anidar de esa forma
 
-//Uso o invocarlo (2)
+//(2) Uso o invocarlo 
 
-// para invocar-> nombre de la funcion seguido de parentesis: calcularArea() (3)
+//(3) para invocar-> nombre de la funcion seguido de parentesis: calcularArea() 
 
-// (7) consolelog(calcularArea('triángulO', (h:12, b:10))) <--- esta hardcodeado
+//(7) consolelog(calcularArea('triángulO', (h:12, b:10))) <--- esta hardcodeado
 
 
 //(8)
@@ -138,7 +138,7 @@ function calcularArea(figura, datos){
         //datos['x']
 
         //datos {h:12.3, b:10.5}
-        //primera vuelta key datos[key] 12.3, segunda vuelta key datos[key] 10.5
+        //primera vuelta key, datos[key] 12.3, segunda vuelta key, datos[key] 10.5
 
         for (const key in datos) {
             resultado = datos[key]
