@@ -1,7 +1,7 @@
 // declaración (1)
 
 
-/** JAVADOC se llama esta forma de comentario (5)
+/** (JAVADOC se llama esta forma de comentario) (5)
  * Qué quiero que haga mi función que calcula el area de algo  -> Calcular areas diversas de figuras
  * Cómo se le dice algo a la función-> el primer parámetro - nombre de la figura
  * El segundo parámetro cual será? depende de la figura - datos de la figura
