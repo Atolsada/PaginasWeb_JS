@@ -124,12 +124,12 @@
 
 //(14) ahora va bien pero no tenemos comprobacion de errores vamos a añadirlo con array for each
 
-function calcularArea(figura, datos){
-    let resultado = 1
+//function calcularArea(figura, datos){
+//    let resultado = 1
     
-    switch(figura.toLowerCase()){
-    case 'triangulo':
-    case 'triángulo':
+//    switch(figura.toLowerCase()){
+//    case 'triangulo':
+//   case 'triángulo':
 
         //datos.h
         //datos['h']
@@ -140,10 +140,36 @@ function calcularArea(figura, datos){
         //datos {h:12.3, b:10.5}
         //primera vuelta key, datos[key] 12.3, segunda vuelta key, datos[key] 10.5
 
+//        for (const key in datos) {
+//            resultado = datos[key]
+//        }
+        // resultado = (datos.h * datos.b) / 2
+//        break;
+//    case 'cuadrado':
+//        resultado = datos.l * datos.l
+//        break;
+//    case 'circulo':
+//    case 'círculo':
+//        resultado = datos.r * datos.r * Math.PI
+//        break;
+
+//    default:
+//        break;
+//    }
+//    return resultado.toFixed(2)
+//}
+
+//(15) Añadimos un throw para poner un codigo de error para pentágono
+
+function calcularArea(figura, datos){
+    let resultado = 1
+    
+    switch(figura.toLowerCase()){
+    case 'triangulo':
+    case 'triángulo':
         for (const key in datos) {
             resultado = datos[key]
         }
-        // resultado = (datos.h * datos.b) / 2
         break;
     case 'cuadrado':
         resultado = datos.l * datos.l
@@ -152,13 +178,19 @@ function calcularArea(figura, datos){
     case 'círculo':
         resultado = datos.r * datos.r * Math.PI
         break;
-
     default:
+        throw ('Operación no permitida')
         break;
     }
     return resultado.toFixed(2)
+    //(16) try y catch para el throw
+    try {
+        let sFigura = 'pentagono'
+        console.log(calcularArea(sFigura, oDatos))
+    } catch (error){
+        console.log(error)
+    }
 }
-
 
 function probar(){
     let sFigura = 'triángulO'
