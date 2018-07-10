@@ -8,11 +8,12 @@ function iterar (){
     }
 }
 // Por donde empiezo? Por 0. Hasta donde? Hasta 3, cuanto aumento? de 1 en 1.
-// i++ --> i + 1
+// i++ --> i + 1 cambia el valor de i
+// i+1 --> no cambia el valor de i
 
 iterar()
 
-
+// La diferencia de while a do while es si la funcion se ejecuta desde el principio
 //WHILE
 
 function iterar_while(){
@@ -26,7 +27,7 @@ function iterar_while(){
 iterar_while()
 
 
-// DO WHILE
+// DO WHILE (primeor comprueba y luego ejecuta)
 
 function iterar_do(){
     let i = 0
