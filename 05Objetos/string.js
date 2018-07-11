@@ -58,4 +58,7 @@ function capitalize2(cadena){
 console.log(capitalize2(frase))
 
 
+console.log(String.fromCharCode(65))
+
+
 
