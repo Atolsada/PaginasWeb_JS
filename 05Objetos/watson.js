@@ -10,6 +10,7 @@ console.log(oX * 2) //<---Object que se comporta como elemental number
 // '22' * 2
 // Number ('22') * 2
 
-let oDatos = {}
-let aDatos = []
+let name = 'Pepe'
+
+name.
 
