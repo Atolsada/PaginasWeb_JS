@@ -56,3 +56,6 @@ function capitalize2(cadena){
     return aTexto.join(' ')
 }
 console.log(capitalize2(frase))
+
+
+
