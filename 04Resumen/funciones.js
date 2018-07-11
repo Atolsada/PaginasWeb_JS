@@ -83,7 +83,7 @@
 //(12) console.log(calcularArea('cosa', {h:12, b:10}))
 
 
-//13
+//(13)
 
 //function calcularArea(figura, datos){
 //    let resultado = 0
