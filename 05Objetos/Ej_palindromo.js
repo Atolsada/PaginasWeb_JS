@@ -167,5 +167,39 @@ function prueba() {
     texto = 'Sometamos o matemos'
 }
 
-isPali('Hello friend')
+// isPali('Hola amigo')
+prueba()
+
+
+//(9)
+
+function isPaliShort(texto) {
+    let result = false
+    // comparacion
+    if (texto.split(' ').join('').toUpperCase() 
+            === texto.split(' ').join('').split('').reverse().join('').toUpperCase()) {
+        result = true
+    }
+
+    //console.log(frase);
+    //console.log(aDatos)
+    //console.log(aClon)
+    //console.log(alReves)
+
+    return result
+}
+
+
+function prueba() {
+    let texto = 'Hola'
+    console.log(isPali(texto)) // false
+    texto = 'Lorem Rajoy Ipsum mejor para mí el suyo'
+    console.log(isPali(texto)) // false
+    texto = 'Madre mía como está el patio'
+    console.log(isPaliShort(texto)) // true
+    texto = 'Sometamos o matemos'
+    console.log(isPali(texto)) // true
+}
+
+// isPali('Hola Amigo')
 prueba()
