@@ -24,7 +24,7 @@ console.log('Perez'.toUpperCase())
 console.log('Perez'.toLowerCase())
 
 
-console.log('ciudades'.slice(2,5)) //<--- ve de 2 y acaba en 5
+console.log('ciudades'.slice(2,5)); //<--- ve de 2 y acaba en 5
 console.log('ciudades'.substr(2,3)) //<--- empieza en 2 y desplazate 3
 
 
@@ -58,7 +58,7 @@ function capitalize2(cadena){
 console.log(capitalize2(frase))
 
 
-console.log(String.fromCharCode(65))
+console.log(String.fromCharCode(1265)) //<--- Codigo de letra 1265 es [ӱ]
 
 
 
