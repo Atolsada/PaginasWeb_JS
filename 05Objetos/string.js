@@ -24,8 +24,8 @@ console.log('Perez'.toUpperCase())
 console.log('Perez'.toLowerCase())
 
 
-'ciudades'.slice(2,5) //<--- ve de 2 y acaba en 5
-'ciudades'.substr(2,3) //<--- empieza en 2 y desplazate 3
+console.log('ciudades'.slice(2,5)) //<--- ve de 2 y acaba en 5
+console.log('ciudades'.substr(2,3)) //<--- empieza en 2 y desplazate 3
 
 
 function capitalize(cadena){
