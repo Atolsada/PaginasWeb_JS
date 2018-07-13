@@ -23,4 +23,46 @@ function main(){
     .addEventListener('click', saludar)
 }
 
-window.addEventListener('load', main)
+// window.addEventListener('load', main)
+
+//o window o document, no pueden estar ambos
+
+//-------------------------------------------------//
+
+function despedir(user) {
+    console.log(`Adios, amigo`)
+}
+function main(){
+    document.querySelector('#btnDespedir')
+    .addEventListener('click', despedir)
+}
+
+
+//----------------------------------//
+
+document.addEventListener('DOMContentLoaded', main)
+
+
+
+
+//----------ARREGLA ESTO-------------////
+
+// debajo bien, comprueba arriba
+
+function saludar() {
+    console.log(`Hola Mundo`)
+}
+
+function despedir() {
+    console.log(`Adiós Mundo Cruel`)
+}
+
+function main() {
+    document.querySelector('#btnSaludar')
+    .addEventListener('click',saludar)
+
+    document.querySelector('#btnDespedir')
+    .addEventListener('click', despedir)
+}
+
+document.addEventListener('DOMContentLoaded', main)
