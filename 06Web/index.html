@@ -5,34 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript en la Web</title>
-    <style>h1 {color: maroon}</style>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
 
 </head>
 <body>
 
     <header>
-        <h1>JavaScript en la Web</h1>
+        <h1 id='title'>JavaScript en la Web</h1>
     </header>
-
-
    <!--(1)  <header>
         <h1 style="color: maroon">JavaScript en la Web</h1>
     </header> -->
     <!--(1) <button onclick="console.log('Pepe')">Haz click</button> -->
     
-    
-    <button onclick="saludar('Pepe')">Haz click</button>
-    
-    <script>
-        function saludar(user) {
-            console.log(`Hola ${user}`)
-        }
-        
-        console.dir(document.querySelector('h1'))
-        
-    </script>
+    <!-- <button onclick="saludar('Pepe')">Haz click</button> -->
+    <button id='btnSaludar'>Haz click</button>
 
-    
 
 </body>
 </html>
