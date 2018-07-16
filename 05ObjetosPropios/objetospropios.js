@@ -45,15 +45,15 @@ oVuelo.mostrar = function (oDatos = this) {
     for (const key in oDatos) {
         if (oDatos.hasOwnProperty(key) && (typeof oDatos[key] !== 'function')) {
             if (typeof oDatos[key] === 'object') { 
-                console.log(`Las propiedades de ${key} son: `)
+                console.log(`Propiedades de: ${key}`)
                 this.mostrar(oDatos[key])
             } else {
-                console.log(`La propiedad ${key} vale ${oDatos[key]}`)
+                console.log(`${key} : ${oDatos[key]}`)
             }    
         }    
     }
 }
-console.log(oVuelo)
+//console.log(oVuelo)
 
 function leeObjeto (oDatos) {
     for (const key in oDatos) {
@@ -68,3 +68,10 @@ function leeObjeto (oDatos) {
 }
 console.clear()
 oVuelo.mostrar()
+console.log(typeof oVuelo) // typeof es un operador unario (x++) // x = 21 operador ¿binario?
+console.log(oVuelo instanceof Object) // operador binario y es booleano
+
+aDatos = []
+console.log(typeof aDatos)
+console.log(aDatos instanceof Object) // dice true por que un array es un objeto
+console.log(aDatos instanceof Array) // Por que tambien es un array
