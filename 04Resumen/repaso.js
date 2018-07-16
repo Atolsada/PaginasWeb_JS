@@ -206,8 +206,8 @@ console.log(aImpares)
 
 // EJERCICIO
 
-let aNombres = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria', 'Juan']
-    aPersonas
+let aNombrazos = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria', 'Juan']
+
 
 
 
@@ -215,14 +215,27 @@ let aNombres = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria', 'Juan']
 
 // SOME y EVERY - (boolean)
 
-// SOME alguno cumple al concicion
-// EVERY todos cumplen la condicion
+// SOME alguno cumple al concicion - conforme encuentra un true se para
+// EVERY todos cumplen la condicion - conforme encuentra un false se para
 
 //¿Son todos pares?
-let aNumbers = [ 2, 5, 7, 8, 9]
-aNumbers.forEach(
-    (item) => {
-        let cuadrado = item*item
-        console.log (`El cuadrado ${item} vale: ${cuadrado}`)
-    }
+
+let = sonTodosPares = aNumbers.every(
+    (item) => {return !!(item % 2)}
+)
+
+console.log(sonTodosPares); // -False
+
+let = hayAlgunPar = aNumbers.some(
+    (item) => {return !!(item % 2)}
+)
+
+console.log(hayAlgunPar); // -True
+
+
+//reduce y reduceRight
+// pilla pares de valores y le aplica la funcion que tu le digas, reduce el array a un unico valor
+
+let valorFinal = aNumbers.reduce(
+    
 )
