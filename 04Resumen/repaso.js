@@ -236,6 +236,17 @@ console.log(hayAlgunPar); // -True
 //reduce y reduceRight
 // pilla pares de valores y le aplica la funcion que tu le digas, reduce el array a un unico valor
 
-let valorFinal = aNumbers.reduce(
-    
-)
+let valorFinal = aNumbers.reduce((a, b) => a+b)
+console.log('Esto es el valorFinal', valorFinal)
+
+let valorFinal = aNumbers.reduceRight((a, b) => a+b)
+console.log('Esto es el valorFinalRight', valorFinal)
+
+
+
+// LOS QUE SE SUELEN USAR - FUNDAMENTALES
+
+// FOR EACH para bucles
+// EVERY y SOME si no entendemos FOR EACH
+// MAP
+// FILTER
