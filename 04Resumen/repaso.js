@@ -204,4 +204,7 @@ let aImpares = aNumbers.filter(
 console.log(aImpares)
 
 
-//
+// EJERCICIO
+
+let aNombres = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria', 'Juan']
+    aPersonas
