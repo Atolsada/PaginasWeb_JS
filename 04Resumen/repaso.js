@@ -208,3 +208,21 @@ console.log(aImpares)
 
 let aNombres = ['Pepe', 'Luis', 'Arancha', 'Rosa', 'Maria', 'Juan']
     aPersonas
+
+
+
+
+
+// SOME y EVERY - (boolean)
+
+// SOME alguno cumple al concicion
+// EVERY todos cumplen la condicion
+
+//¿Son todos pares?
+let aNumbers = [ 2, 5, 7, 8, 9]
+aNumbers.forEach(
+    (item) => {
+        let cuadrado = item*item
+        console.log (`El cuadrado ${item} vale: ${cuadrado}`)
+    }
+)
