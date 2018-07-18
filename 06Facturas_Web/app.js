@@ -1,22 +1,4 @@
-function Empresa (nombre, direccion, telefono, nif) {
-    this.nombre = nombre 
-    this.direccion = direccion 
-    this.telefono = telefono 
-    this.nif = nif 
-}
-function Elemento (descripcion, precio, cantidad) {
-    this.descripcion = descripcion
-    this.precio = precio
-    this.cantidad = cantidad
-}
 
-function Factura (tipoIVA, formaPago) {
-    this.cliente = ''
-    this.elementos = []
-    this.importeTotal = 0
-    this.tipoIVA = tipoIVA
-    this.formaPago = formaPago
-}
 
 Factura.prototype.mostrar = function() {
         this.calculaImporteTotal()
