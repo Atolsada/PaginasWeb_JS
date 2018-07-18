@@ -75,3 +75,9 @@ aDatos = []
 console.log(typeof aDatos)
 console.log(aDatos instanceof Object) // dice true por que un array es un objeto
 console.log(aDatos instanceof Array) // Por que tambien es un array
+
+Math.cos()
+JSON.stringify()
+
+// No existe como método estático Array.push()
+aDatos.push(1)
