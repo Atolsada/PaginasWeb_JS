@@ -9,32 +9,33 @@ function Elemento (descripcion, precio, cantidad) {
     this.precio = precio
     this.cantidad = cantidad
 }
-function Factura (empresa, tipoIVA, formaPago) {
-    this.empresa = empresa
+
+function Factura (tipoIVA, formaPago) {
     this.cliente = ''
     this.elementos = []
     this.importeTotal = 0
     this.tipoIVA = tipoIVA
     this.formaPago = formaPago
-    this.mostrar = function() {
+}
+
+Factura.prototype.mostrar = function() {
         this.calculaImporteTotal()
         this.pintaDatos()
     }
-}
-
 
 Factura.prototype.calculaImporteTotal = function() {
-    this.importeTotal = 0
-    this.elementos.forEach(
-        (item) => {
-            this.importeTotal +=
-            item.precio*item.cantidad*this.tipoIVA
-        }
-    )
-}
+        this.importeTotal = 0
+        this.elementos.forEach(
+            (item) => {
+                this.importeTotal +=
+                item.precio*item.cantidad*this.tipoIVA
+            }
+        )
+    }
+
 Factura.prototype.pintaDatos = function(oDatos = this) {
     for (const key in oDatos) {
-        if (oDatos.hasOwnProperty(key) && (typeof oDatos[key] !== 'function')) {
+        if ((typeof oDatos[key] !== 'function')) {
             if (typeof oDatos[key] === 'object') { 
                 if (isNaN(key)) {
                     console.log(`Propiedades de ${key}: `)
@@ -47,19 +48,24 @@ Factura.prototype.pintaDatos = function(oDatos = this) {
     }
 }
 
-Factura.prototype.ivaBase = 1.16
-console.log(Factura.prototype)
-
+Factura.prototype.empresa =  new Empresa(
+    'Boracay Ediciones',
+    'c/ Pez',
+    '587 349 785',
+    'Z-345123876')
+Factura.prototype.ivaBase = '1.16'
+// console.log(Factura.prototype)
 
 function crearFactura1() {
-    let factura1 = new Factura(
-        new Empresa(
-            'Boracay Ediciones',
-            'c/ Pez',
-            '587 349 785',
-            'Z-345123876'), 
+    let factura1 = new Factura( 
         1.04, 
-        'contado' ) 
+        'contado') 
+
+    factura1.empresa = new Empresa(
+        'Ediciones Alpiste',
+        'c/ Piolin',
+        '587 349 785',
+        'Z-345123876')
 
     factura1.cliente = 
         new Empresa(
@@ -70,7 +76,7 @@ function crearFactura1() {
 
     factura1.elementos.push(
         new Elemento (
-            'La Isla del Tesora',30,10)
+            'La Isla del Tesoro',30,10)
     )
 
     factura1.elementos.push(
@@ -78,20 +84,14 @@ function crearFactura1() {
     )
 
     factura1.elementos.push(
-        new Elemento ('El Señor de loas Anillos', 50, 24)
+        new Elemento ('El Señor de los Anillos', 50, 24)
     )
 
-    //factura1.mostrar()
-    console.log(factura1)
+    factura1.mostrar()
 }
 
 function crearFactura2() {
-    let factura1 = new Factura(
-        new Empresa(
-            'Boracay Ediciones',
-            'c/ Pez',
-            '587 349 785',
-            'Z-345123876'), 
+    let factura1 = new Factura( 
         1.04, 
         'transferencia' ) 
 
@@ -115,16 +115,9 @@ function crearFactura2() {
         new Elemento ('El Hobbit', 50, 24)
     )
 
-    // factura1.mostrar()    
-    console.log(factura1)
+    factura1.mostrar()    
+    //console.log(factura1)
 }
 
-
-//crearFactura1()
-//crearFactura2()
-
-// Pueden compartir las funciones los objetos(funciones) en JS
-let factura1 = new Factura({}, 1.04, 'contado')
-console.log(factura1)
-console.log(factura1.ivaBase)
-factura1.mostrar()
+crearFactura1()
+crearFactura2()
