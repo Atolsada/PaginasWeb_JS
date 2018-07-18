@@ -1,4 +1,4 @@
-function Factura (tipoIVA, formaPago) {
+export function Factura (tipoIVA, formaPago) {
     this.cliente = ''
     this.elementos = []
     this.importeTotal = 0
