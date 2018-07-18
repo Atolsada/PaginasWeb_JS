@@ -1,7 +1,3 @@
-import {Elemento} from './Elemento.js'
-import {Empresa} from './Empresa.js'
-import {Factura} from './Factura.js'
-
 Factura.prototype.mostrar = function() {
         this.calculaImporteTotal()
         this.pintaDatos()
