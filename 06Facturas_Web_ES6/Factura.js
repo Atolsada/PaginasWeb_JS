@@ -1,3 +1,4 @@
+import {} from './Empresa.js'
 export function Factura (tipoIVA, formaPago) {
     this.cliente = ''
     this.elementos = []
