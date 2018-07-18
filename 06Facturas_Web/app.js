@@ -1,5 +1,3 @@
-
-
 Factura.prototype.mostrar = function() {
         this.calculaImporteTotal()
         this.pintaDatos()
