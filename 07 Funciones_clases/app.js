@@ -1,44 +1,7 @@
-import {Elemento} from './Elemento.js'
-import {Empresa} from './Empresa.js'
-import {Factura} from './Factura.js'
-
-Factura.prototype.mostrar = function() {
-        this.calculaImporteTotal()
-        this.pintaDatos()
-    }
-
-Factura.prototype.calculaImporteTotal = function() {
-        this.importeTotal = 0
-        this.elementos.forEach(
-            (item) => {
-                this.importeTotal +=
-                item.precio*item.cantidad*this.tipoIVA
-            }
-        )
-    }
-
-Factura.prototype.pintaDatos = function(oDatos = this) {
-    for (const key in oDatos) {
-        if ((typeof oDatos[key] !== 'function')) {
-            if (typeof oDatos[key] === 'object') { 
-                if (isNaN(key)) {
-                    console.log(`Propiedades de ${key}: `)
-                }
-                this.pintaDatos(oDatos[key])
-            } else {
-                console.log(`${key} : ${oDatos[key]}`)
-            }    
-        }    
-    }
-}
-
-Factura.prototype.empresa =  new Empresa(
-    'Boracay Ediciones',
-    'c/ Pez',
-    '587 349 785',
-    'Z-345123876')
-Factura.prototype.ivaBase = '1.16'
-// console.log(Factura.prototype)
+import {Elemento} from './Elemento.js';
+import {Empresa} from './Empresa.js';
+import {Factura} from './Factura.js';
+import {FacturaHtml} from './FacturaHtml.js';
 
 function crearFactura1() {
     let factura1 = new Factura( 
@@ -105,9 +68,19 @@ function crearFactura2() {
         new Elemento ('El Hobbit', 50, 24)
     )
 
-    factura1.mostrar()    
+    //factura1.mostrar()    
     //console.log(factura1)
+    factura1.calculaImporteTotal()
+
 }
 
-crearFactura1()
-crearFactura2()
+/* crearFactura1()
+crearFactura2() */
+
+function main(){
+    crearFactura1()
+    //new FacturaHtml().pintaDatos(factura1)
+    //crearFactura2()
+}
+
+document.addEventListener('DOMContentLoaded', main)
