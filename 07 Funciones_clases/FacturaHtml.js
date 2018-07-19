@@ -61,3 +61,24 @@ export class FacturaHtml {
         this.pintaTabla(facturaDatos.elementos)
     }
 
+    pintaTabla(elementosDatos) {
+        console.log(elementosDatos)
+        let tabla =
+            `<tr class="tabla-title">
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>`
+            elementosDatos.forEach(item => {
+                tabla += 
+                `<tr>
+                <td>${item.descripcion}</td>
+                <td>${item.precio}</td>
+                <td>${item.cantidad}</td>
+                </tr>`
+            });
+        tabla =  '<tr class="tabla-title"><th>Descripcion</th><th>Precio</th><th>Cantidad</th></tr>`    
+            
+        this.elementosTabla.innerHTML = tabla
+    }
+}
