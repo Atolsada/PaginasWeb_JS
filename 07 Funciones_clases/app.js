@@ -51,12 +51,18 @@ function crearFactura1() {
         '587 349 785',
         'Z-345123876')
 
-    factura1.cliente = 
+    /* factura1.cliente = 
         new Empresa(
             'Libreria Tuatalug',
             'c/ Tortuga',
             '543 987 654',
-            'K-434344343')
+            'K-434344343') */
+
+    factura1.setCliente(
+        'Libreria Tuatalug',
+        'c/ Tortuga',
+        '543 987 654',
+        'K-434344343')
 
     factura1.elementos.push(
         new Elemento (
