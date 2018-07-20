@@ -7,6 +7,9 @@ class Persona{
     mostrar(){
         console.log(this)
     }
+    saludar(){
+        console.log(`Hola, soy ${this.nombre}, de ${this.pais}, y tengo ${this.edad} años`)
+    }
 }
 
 p1 = new Persona('Pepe', 34) //<--- hemos INSTANCIADO "Persona" en p1 (recuerda el mito de la caverna)
@@ -30,7 +33,12 @@ class Estudiante extends(Persona) {
         this.numMatricula = numMatricula
         this.curso = curso
     }
+    saludar(){
+        super.saludar() // <--- Hola, soy Juan, de España, y tengo 21 años
+        console.log(`Estudio ${this.curso}`) //<--- Estudio Web
+    }
 }
 
 e1 = new Estudiante ('Juan', 21, '', 0034, 'Web')
 e1.mostrar()
+e1.saludar()
