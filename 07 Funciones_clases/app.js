@@ -1,7 +1,7 @@
-import {Elemento} from './Elemento.js';
-import {Empresa} from './Empresa.js';
-import {Factura} from './Factura.js';
-import {FacturaHtml} from './FacturaHtml.js';
+import {Elemento} from './Elemento.js'
+import {Empresa} from './Empresa.js'
+import {Factura} from './Factura.js'
+import { FacturaHtml } from './FacturaHtml.js';
 
 function crearFactura1() {
     let factura1 = new Factura( 
@@ -22,11 +22,11 @@ function crearFactura1() {
             'K-434344343') */
 
     factura1.setCliente(
-        'Libreria Tuatalug',
-        'c/ Tortuga',
-        '543 987 654',
-        'K-434344343')
-
+                'Libreria Tuatalug',
+                'c/ Tortuga',
+                '543 987 654',
+                'K-434344343')
+    
     factura1.elementos.push(
         new Elemento (
             'La Isla del Tesoro',30,10)
@@ -40,7 +40,10 @@ function crearFactura1() {
         new Elemento ('El Señor de los Anillos', 50, 24)
     )
 
-    factura1.mostrar()
+    //factura1.mostrar()
+    factura1.calculaImporteTotal()
+    new FacturaHtml().pintarDatos(factura1)
+
 }
 
 function crearFactura2() {
@@ -71,16 +74,15 @@ function crearFactura2() {
     //factura1.mostrar()    
     //console.log(factura1)
     factura1.calculaImporteTotal()
-
+    new FacturaHtml().pintarDatos(factura1)
 }
 
-/* crearFactura1()
-crearFactura2() */
 
-function main(){
-    crearFactura1()
-    //new FacturaHtml().pintaDatos(factura1)
-    //crearFactura2()
+
+
+function main() {
+    //crearFactura1()
+    crearFactura2()
 }
 
 document.addEventListener('DOMContentLoaded', main)

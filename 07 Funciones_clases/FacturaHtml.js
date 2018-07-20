@@ -22,31 +22,6 @@ export class FacturaHtml {
 
     pintarDatos(facturaDatos) {
         console.dir(facturaDatos)
-        this.empresa.nombre.innerHTML = import { Empresa } from "./Empresa";
-    }
-
-export class FacturaHtml {
-    constructor () {
-        this.empresa = {
-            nombre :  document.querySelector("#empresa-nombre"),
-            direccion : document.querySelector("#empresa-direccion"),
-            telefono : document.querySelector("#empresa-telefono"),
-            nif: document.querySelector("#empresa-nif"  )
-        }
-        this.cliente = new Empresa(
-            document.querySelector("#cliente-nombre"),
-            document.querySelector("#cliente-direccion"),
-            document.querySelector("#cliente-telefono"),
-            document.querySelector("#cliente-nif")
-        )
-        this.elementosTabla = document.querySelector("#elementos-tabla")
-        this.importeTotal = document.querySelector("#importeTotal")
-        this.tipoIVA = document.querySelector("#tipoIVA")
-        this.formaPago = document.querySelector("#formaPago")
-    }
-
-    pintarDatos() {
-        console.dir(facturaDatos)
         this.empresa.nombre.innerHTML = facturaDatos.empresa.nombre
         this.empresa.direccion.innerHTML = facturaDatos.empresa.direccion 
         this.empresa.telefono.innerHTML = facturaDatos.empresa.telefono
@@ -58,10 +33,11 @@ export class FacturaHtml {
         this.importeTotal.innerHTML = facturaDatos.importeTotal
         this.tipoIVA.innerHTML = facturaDatos.tipoIVA
         this.formaPago.innerHTML = facturaDatos.formaPago
-        this.pintaTabla(facturaDatos.elementos)
+        this.elementosTabla.innerHTML = 
+                this.crearTabla(facturaDatos.elementos)
     }
 
-    pintaTabla(elementosDatos) {
+    crearTabla(elementosDatos) {
         console.log(elementosDatos)
         let tabla =
             `<tr class="tabla-title">
@@ -69,16 +45,16 @@ export class FacturaHtml {
                 <th>Precio</th>
                 <th>Cantidad</th>
             </tr>`
-            elementosDatos.forEach(item => {
-                tabla += 
+
+        elementosDatos.forEach(item => {
+            tabla +=
                 `<tr>
                 <td>${item.descripcion}</td>
                 <td>${item.precio}</td>
                 <td>${item.cantidad}</td>
-                </tr>`
-            });
-        tabla =  '<tr class="tabla-title"><th>Descripcion</th><th>Precio</th><th>Cantidad</th></tr>`    
-            
-        this.elementosTabla.innerHTML = tabla
+            </tr>`
+        });
+        return tabla
     }
+
 }

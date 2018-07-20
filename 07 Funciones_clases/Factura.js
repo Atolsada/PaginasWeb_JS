@@ -13,15 +13,13 @@ export class Factura {
         this.tipoIVA = tipoIVA
         this.formaPago = formaPago
     }  
-
-    // funcion SET - cuando me de la gana se ejecuta, no es automatico como con construct
-
-    setCliente(nombre, direccion, telefono, nif){
+// funcion SET - cuando me de la gana se ejecuta, no es automatico como con construct
+    setCliente(nombre, direccion, telefono, nif) {
         this.cliente = new Empresa(
-        nombre,
-        direccion,
-        telefono,
-        nif)
+            nombre, 
+            direccion, 
+            telefono, 
+            nif)
     }
 
     mostrar() {
@@ -57,4 +55,3 @@ export class Factura {
         }
     }
 }
-
