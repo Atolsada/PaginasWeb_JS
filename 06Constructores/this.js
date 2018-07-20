@@ -42,3 +42,9 @@ function CosaRara(){
 
 new CosaRara()
 // new es un operador.
+
+
+//EJEMPLO 4
+
+// THIS -> quien yo decida
+// call() / apply()
