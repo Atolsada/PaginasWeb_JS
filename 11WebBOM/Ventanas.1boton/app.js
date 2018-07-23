@@ -8,6 +8,10 @@ class App {
         //MODO (3)
         this.img = null
         this.prepararImg()
+        //MODO(4)
+        if (!navigator.cookieEnabled) {
+            alert('Por favor permite las cookies')
+        }
     }
 
     prepararImg(){ //MODO(3)
