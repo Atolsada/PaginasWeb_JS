@@ -26,7 +26,16 @@ class App{
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new App())
+document.addEventListener('DOMContentLoaded', () => new App()) //funcion sin nombre
+//LA FUNCION INSTANCIA UN OBJETO DE LA FUNCION(SIN NOMBRE) LLAMADA APP
+// cuando carga la pagina se crea en este caso, la funcion anonima
+
+// function() {
+//    new App()}
+// funcion con nombre, pero igual que arriba
+// () => {let ò const app = new App()} <-- lo mismo pero app te dirá que jamas se usará
+
+
 
 // Forma diferente 1
 // document.addEventListener('DOMContentLoaded', 
