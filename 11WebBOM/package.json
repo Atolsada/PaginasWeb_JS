@@ -10,11 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/Atolsada/PaginasWeb_JS.git"
   },
-  "keywords": ["Javascript", "ECMAScript"],
+  "keywords": [
+    "Javascript",
+    "ECMAScript"
+  ],
   "author": "Toni Tolsada",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Atolsada/PaginasWeb_JS/issues"
   },
-  "homepage": "https://github.com/Atolsada/PaginasWeb_JS#readme"
+  "homepage": "https://github.com/Atolsada/PaginasWeb_JS#readme",
+  "dependencies": {
+    "js-cookie": "^2.2.0"
+  }
 }
