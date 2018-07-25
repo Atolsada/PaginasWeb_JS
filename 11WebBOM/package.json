@@ -1,27 +1,15 @@
 {
-  "name": "PaginasWeb_JS",
+  "name": "Cookies",
   "version": "1.0.0",
-  "description": "Módulo 2 de curso de páginas web",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Atolsada/PaginasWeb_JS.git"
-  },
-  "keywords": [
-    "Javascript",
-    "ECMAScript"
-  ],
-  "author": "Toni Tolsada",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Atolsada/PaginasWeb_JS/issues"
-  },
-  "homepage": "https://github.com/Atolsada/PaginasWeb_JS#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "js-cookie": "^2.2.0",
-    "moment": "^2.22.2"
+    "js-cookie": "^2.2.0"
   }
 }
