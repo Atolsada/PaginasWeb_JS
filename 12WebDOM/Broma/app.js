@@ -1,13 +1,33 @@
-
 class App {
-    constructor(){
-        let jaJa = console.dir(document.querySelector('div li'))
-        nodoJaja.forEach( 
-        (jaJa) => {Node.innerHTML = 'Te troileé xXd'})
+    constructor() {
+        this.count = 0;
+        this.aLinks = document.querySelectorAll('.social') //devuelve un nodelist
+        this.items = this.aLinks.length
+
+        // asocio a todos los nodos el mismo manejador
+        this.aLinks.forEach( (node) => {
+            node.addEventListener('click', this.cambiaLista.bind(this))
+        });
+    }
+
+    cambiaLista(ev) {
+        let nodeItem = ev.target
+        // Si el item ya esta cambiado, no hago nada
+        if (nodeItem.textContent.indexOf('Ops') >= 0) {
+            return
+        }
+        // Cambio el item clickeado
+        nodeItem.textContent = "Ops, no tengo " + nodeItem.textContent;
+        this.count++;
+        // Si ya han cambiado todos los items ...
+        if (this.count === this.aLinks.length) {
+            nodeItem.parentNode.parentNode.outerHTML = 
+                    `<div>
+                        <p>Lo siento, parece que estoy ilocalizable</p>
+                    </div>`;
+        }
     }
 }
 
-let nodoJaja = document.querySelector('#jaja')
 
-document.addEventListener('DomContentLoaded', 
-() => {new ApplicationCache()})
+document.addEventListener("DOMContentLoaded",() => {new App()})
