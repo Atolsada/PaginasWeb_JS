@@ -28,14 +28,21 @@ class App {
             //(nodo) => {Node.innerHTML = 'Ja, Ja'} el valor JAJA se lo dan a todos los <p>
         ) */
 
-        //En los inicios
+        /* //En los inicios
         document.getElementById('p1') 
         //ELEMENT, NO ELEMENTS. busca el primer id, y para. En el caso que hubiese mas con el mismo
         document.getElementsByTagName('p')
 
         document.getElementsByName('nombre')
         //devuelve un "array"(un html collection) con el ???????
-        document.getElementsByClassName('importante') // ????????
+        document.getElementsByClassName('importante') // ???????? */
+
+        let nodoMenu = document.querySelector('#main-menu')
+        console.dir(nodoMenu)
+        nodoMenu.querySelectorAll('li') //devuelve los li pero dentro del nodoMenu, no de todo el documento
+
+        document.querySelectorAll('li') //devuelve los li pero de todo el documento
+        // devuelve un nodelist del documento
     }
 }
 
