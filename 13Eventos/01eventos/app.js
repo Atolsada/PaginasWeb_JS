@@ -19,7 +19,7 @@ aDivs.forEach((div) => {
 
 
 // Funcion con nombre - hover
-function main(){
+function main3(){
     let aDivs = document.querySelectorAll('section div')
     
     aDivs.forEach((div) => {
@@ -61,6 +61,36 @@ function main(){
         } 
         }
 
+
+// Definitiva poniendo link a Google
+function main() { 
+    let aDivs = document.querySelectorAll('section div')
+    // aDivs.addEventListener()
+    aDivs.forEach((div) => {
+        // div.addEventListener('mouseover', hover)
+        div.onmouseover = hover
+        // div.addEventListener('mouseout', hover)
+        div.onmouseout = hover 
+    })
+
+    document.querySelector('footer a')
+        .addEventListener('click', navegar)
+
+    function hover(oE) {
+        // En este caso, al no ser un metodo
+        // this === oE.target
+        if(oE.type == 'mouseover') {
+            this.style.backgroundColor = "pink"
+        } else {
+            oE.target.style.backgroundColor= "brown"
+        }
+    }
+
+    function navegar () {
+        console.log('Navegando');
+    }
+
+}
 
 
 // document.addEventListener('DOMContentLoaded', main)
