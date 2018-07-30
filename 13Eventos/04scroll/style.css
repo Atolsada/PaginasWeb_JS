@@ -1,4 +1,38 @@
 body{
+    margin: 0;
+}
+
+header{
+    background-color: brown;
+    color: bisque;
+    text-align: center;
+}
+
+.normal-header{
+    height: 20vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.sticky-header {
+    padding: 0.5rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.bajo-header{
+    height: 5rem;
+
+}
+
+
+h1{
+    margin: 0px;
+}
+
+main{
     margin: 2rem;
 }
 
@@ -6,6 +40,9 @@ body{
     position: fixed;
     right: 4rem;
     bottom: 4rem;
+    padding: 1rem;
+    opacity: 0.8;
+    background-color: rgb(99, 99, 99);
 }
 
 .hide{
