@@ -1,0 +1,13 @@
+body{
+    margin: 2rem;
+}
+
+.btn-top{
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+}
+
+.hide{
+    display: none;
+}
