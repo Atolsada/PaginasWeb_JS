@@ -65,11 +65,8 @@ function main3(){
 // Definitiva poniendo link a Google
 function main() { 
     let aDivs = document.querySelectorAll('section div')
-    // aDivs.addEventListener()
     aDivs.forEach((div) => {
-        // div.addEventListener('mouseover', hover)
         div.onmouseover = hover
-        // div.addEventListener('mouseout', hover)
         div.onmouseout = hover 
     })
 
@@ -77,8 +74,6 @@ function main() {
         .addEventListener('click', navegar)
 
     function hover(oE) {
-        // En este caso, al no ser un metodo
-        // this === oE.target
         if(oE.type == 'mouseover') {
             this.style.backgroundColor = "pink"
         } else {
@@ -87,7 +82,12 @@ function main() {
     }
 
     function navegar () {
-        console.log('Navegando');
+        oE.preventDefault() //Para quitar la propiedad por defecto
+        console.log('Navegando')
+        let res = confirm("¿Estas seguro?")
+        if (res) {
+            location.assign('https://www.google.com')
+        }
     }
 
 }
