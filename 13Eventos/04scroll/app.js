@@ -40,6 +40,14 @@ class App {
     subir(oE){
         //console.log('Subiendo')
         document.scrollingElement.scrollTop = 0
+
+        // location.assign()
+        // location.href = "#"
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth' //Para que el desplazamiento sea despacito
+        })
     }
 }
 
