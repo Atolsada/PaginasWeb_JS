@@ -51,8 +51,15 @@ class App{
     // offset ---> [0, 811, 1556, 2318, 3063]
     // Por ejemplo 
     // Position 100, es mayor que 0? si, pues continua el bucle.
-    navegar(){
-
+    navegar(oE){
+        let i = oE.target.dataset.index
+        oE.preventDefault() // oE ---> objectEvent
+        //console.log(oE)  ----> para ver si nos llega la posicion de los elementos del array sections
+        window.scroll({
+            top: this.aOffset[i], 
+            left: 0, 
+            behavior: 'smooth'
+        })
     }
 
     calcularOffsets(){ // Si hubiesen positions relative o absolute esta function falsearia los datos.
