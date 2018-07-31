@@ -60,10 +60,12 @@ class App{
             (section) =>{
                 // console.log(section.offsetTop)
                 // Nos da la consola: 48, 667, 1286, 1904, 2523 que son las posiciones en pixeles de las sections
-                this.aOffset.push(section.offsetTop)
+                // this.aOffset.push(section.offsetTop)
+                this.aOffset.push(section.offsetTop-60)
             }
         )
         this.aOffset[0] = 0
+        console.log(this.aOffset)
     }
 
 }
