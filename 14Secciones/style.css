@@ -24,6 +24,10 @@ header {
     justify-content: space-between
 }
 
+.bajo-header {
+    padding-top: 3rem;
+}
+
 nav li {
     display: inline-block;
 }
@@ -40,7 +44,17 @@ nav a {
     padding: 0.2rem 2rem;
 }
 
-.content_wrapper{
-    margin: 3rem 10%;
+.active {
+    color: brown;
+    background-color: bisque; 
+}
+
+
+section:nth-of-type(2n) {
+    background-color: lightcoral;
+}
+
+.content_wrapper {
+    margin: 0 10%;
     padding: 1rem;
 }
