@@ -4,7 +4,8 @@ class App {
         this.divTop = document.querySelector('#div-top')
         this.header = document.querySelector('header')
         this.parrafoHeader = document.querySelector('header p')
-        this.bajoHeader = document.querySelector('bajo-header')
+        this.bajoHeader = document.querySelector('#bajo-header')
+        
         document.addEventListener('scroll', 
             this.scollDetect.bind(this) )
         this.btnTop.addEventListener('click', 
