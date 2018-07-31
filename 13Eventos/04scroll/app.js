@@ -16,18 +16,16 @@ class App {
             // sticky header 
             this.header.classList.add('sticky-header')
             this.header.classList.remove('normal-header')
-            this.parrafoHeader.classList.remove('hide')
+            this.parrafoHeader.classList.add('hide')
 
-            this.bajoHeader.classList.add('bajo-header')
             this.bajoHeader.classList.add('bajo-header')
             this.bajoHeader.classList.remove('hide')
         } else {
             // normal header
-            this.header.classList.add('normal-header')
             this.header.classList.remove('sticky-header')
+            this.header.classList.add('normal-header')
             this.parrafoHeader.classList.remove('hide')
 
-            this.bajoHeader.classList.remove('bajo-header')
             this.bajoHeader.classList.remove('bajo-header')
             this.bajoHeader.classList.add('hide')
         }
